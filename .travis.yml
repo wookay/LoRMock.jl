@@ -11,7 +11,9 @@ julia:
   - 1.3
 
 before_script:
-  - julia -e 'using Pkg; pkg"registry add https://github.com/wookay/Registro.git"; pkg"up"' 
+  - julia -e 'using Pkg; pkg"registry add https://github.com/JuliaRegistries/General.git"'
+  - julia -e 'using Pkg; pkg"registry add https://github.com/wookay/Registro.git"'
+  - julia -e 'using Pkg; pkg"up"' 
 
 after_success:
   - if [[ "$TRAVIS_OS_NAME" == linux && "$TRAVIS_JULIA_VERSION" == 1.3 ]] ; then julia --project -e 'using Pkg;
