@@ -1,0 +1,18 @@
+name = "LoRMock"
+uuid = "916472c3-cd8f-4e06-b672-6b5bacc7f2b3"
+authors = ["WooKyoung Noh <wookay.noh@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Bukdu = "3e78a19a-cc83-51d8-955b-515f39fd7955"
+LoRDeckCodes = "078e6c93-a565-420a-af46-e2c4e3180690"
+
+[extras]
+Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "Jive"]
+
+[compat]
+julia = "1"
