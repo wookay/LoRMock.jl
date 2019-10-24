@@ -3,17 +3,23 @@ module test_lormock_data_dragon
 using Test
 using LoRMock.DataDragon
 
-card = Card("01DE001")
-@test card.regionRef == "Demacia"
-@test card.attack == 3
-@test card.cost == 4
-@test card.health == 3
-@test card.name == "Vanguard Bannerman"
-@test card.cardCode == "01DE001"
+card = Card("01IO006")
+@test card.regionRef == "Ionia"
+@test card.attack == 2
+@test card.cost == 2
+@test card.health == 1
+@test card.name == "Greenglade Duo"
+@test card.cardCode == "01IO006"
 @test card.rarityRef == "Rare"
-@test card.subtype == "Elite"
+@test card.subtype == ""
 @test card.type == "Unit"
 @test card.collectible
-@test first(filter(c -> c.cardCode == "01DE001", BundleSet)) == card
+@test first(filter(c -> c.cardCode == "01IO006", SetBundles)) == card
+
+using LoRDeckCodes
+deck = Deck("CEAAECABAIDASDASDISC2OIIAECBGGY4FAWTINZ3AICACAQXDUPCWBABAQGSOKRM")
+@test CardCodeAndCount("01IO006", 2) in deck.cards
+@test card in deck
+@test !(Card("01DE001") in deck)
 
 end # module test_lormock_data_dragon

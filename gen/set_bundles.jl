@@ -1,5 +1,5 @@
 # generated
-BundleSet = Card[
+SetBundles = Card[
     Card(String[], "Ionia", 0, 3, 0, "Give an ally +0|+3 this round.", "", "SIXMOREVODKA", "Discipline of Fortitude", "01IO012T2", ["Burst"], "Burst", "None", "", "", "Spell", false),
     Card(["01NX020T1", "01NX020T2", "01NX020"], "Noxus", 5, 3, 4, "Play or Strike: Create 2 Spinning Axe in hand.", "\"You want an autograph? Get in line, pal.\"", "SIXMOREVODKA", "Draven", "01NX020T3", ["Overwhelm"], "", "None", "", "Champion", "Unit", false),
     Card(String[], "Demacia", 1, 3, 4, "End of Round: Grant other allies +1|+1 if an ally died this round.", "\"Citizens, evil has taken the hour, but it will not win the day. Remember our fallen, and wear their memories like armor!\"", "SIXMOREVODKA", "Dawnspeakers", "01DE031", String[], "", "Epic", "", "", "Unit", true),

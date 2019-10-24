@@ -7,7 +7,7 @@ prefix = Prefix(normpath(@__DIR__, "datadragon-set1-lite-en_us"))
 
 using JSON2
 
-bundle_set = normpath(@__DIR__, "bundle_set.jl")
+set_bundles = normpath(@__DIR__, "set_bundles.jl")
 set1 = normpath(@__DIR__, "datadragon-set1-lite-en_us/en_us/data/set1-en_us.json")
 
 include(normpath(@__DIR__, "../src/types.jl"))
@@ -16,9 +16,9 @@ function Card(nt::NamedTuple)
     Card((x -> getindex(nt, x)).(fields)...)
 end
 
-f = open(bundle_set, "w")
+f = open(set_bundles, "w")
 write(f, "# generated\n")
-write(f, "BundleSet = Card[\n")
+write(f, "SetBundles = Card[\n")
 for nt in JSON2.read(read(set1, String))
     card = Card(nt)
     write(f, repeat(' ', 4), repr(card), ",\n")
