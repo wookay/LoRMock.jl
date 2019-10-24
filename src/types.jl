@@ -1,10 +1,30 @@
 # module LoRMock
 
-using LoRDeckCodes: Card
+using LoRDeckCodes: CardCodeAndCount
+
+struct Card
+    associatedCardRefs::Vector{String}
+    regionRef::String
+    attack::Int
+    cost::Int
+    health::Int
+    descriptionRaw::String
+    flavorText::String
+    artistName::String
+    name::String
+    cardCode::String
+    keywords::Vector{String}
+    spellSpeedRef::String
+    rarityRef::String
+    subtype::String
+    supertype::String
+    type::String
+    collectible::Bool
+end
 
 struct DeckList
     DeckCode::Union{Nothing,String}
-    CardsInDeck::Union{Nothing,Vector{Card}}
+    CardsInDeck::Union{Nothing,Vector{CardCodeAndCount}}
 end
 
 struct GameResult

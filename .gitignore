@@ -3,3 +3,4 @@
 *.jl.*.cov
 *.jl.mem
 docs/build
+deps/datadragon-set1-lite-en_us
