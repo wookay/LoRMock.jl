@@ -1,11 +1,12 @@
 module DataDragon # LoRMock
 
-export Card, SetBundles
+export Card, SetBundles, CoreBundles
 
 using ..LoRMock: Card
 using LoRDeckCodes: Deck
 
 include(normpath(@__DIR__, "..", "gen", "set_bundles.jl"))
+include(normpath(@__DIR__, "..", "gen", "CoreBundles.jl"))
 
 function Card(code::String)::Card
     getindex(SetBundles, code)

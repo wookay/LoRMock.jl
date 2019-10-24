@@ -23,4 +23,7 @@ deck = Deck("CEAAECABAIDASDASDISC2OIIAECBGGY4FAWTINZ3AICACAQXDUPCWBABAQGSOKRM")
 @test card in deck
 @test !(Card("01DE001") in deck)
 
+@test CoreBundles.spellSpeeds == ["Slow", "Burst", "Fast"]
+@test CoreBundles.rarities == ["Common", "Rare", "Epic", "Champion", "None"]
+
 end # module test_lormock_data_dragon
