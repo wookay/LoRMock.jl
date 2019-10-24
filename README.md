@@ -4,6 +4,8 @@
 |:----------------------------------------------------------------:|
 |  [![][travis-img]][travis-url]  [![][codecov-img]][codecov-url]  |
 
+Legends of Runeterra Data Dragon
+https://developer.riotgames.com/docs/lor#data-dragon
 
 ```julia
 julia> using LoRMock.DataDragon
