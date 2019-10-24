@@ -14,7 +14,7 @@ card = Card("01IO006")
 @test card.subtype == ""
 @test card.type == "Unit"
 @test card.collectible
-@test first(filter(c -> c.cardCode == "01IO006", SetBundles)) == card
+@test haskey(SetBundles, card.cardCode)
 
 using LoRDeckCodes
 deck = Deck("CEAAECABAIDASDASDISC2OIIAECBGGY4FAWTINZ3AICACAQXDUPCWBABAQGSOKRM")

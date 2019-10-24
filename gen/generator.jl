@@ -18,10 +18,10 @@ end
 
 f = open(set_bundles, "w")
 write(f, "# generated\n")
-write(f, "SetBundles = Card[\n")
+write(f, "SetBundles = Dict{String,Card}(\n")
 for nt in JSON2.read(read(set1, String))
     card = Card(nt)
-    write(f, repeat(' ', 4), repr(card), ",\n")
+    write(f, repeat(' ', 4), repr(card.cardCode), " => ", repr(card), ",\n")
 end
-write(f, "]\n")
+write(f, ")\n")
 close(f)
