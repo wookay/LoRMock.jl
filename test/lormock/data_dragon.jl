@@ -10,6 +10,7 @@ card = Card("01IO006")
 @test card.health == 1
 @test card.name == "Greenglade Duo"
 @test card.cardCode == "01IO006"
+@test card.keywords == ["Elusive"]
 @test card.rarityRef == "Rare"
 @test card.subtype == ""
 @test card.type == "Unit"

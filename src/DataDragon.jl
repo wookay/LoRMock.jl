@@ -7,8 +7,8 @@ using LoRDeckCodes: Deck
 
 include(normpath(@__DIR__, "..", "gen", "set_bundles.jl"))
 
-function Card(code::String)::Union{Nothing,Card}
-    get(SetBundles, code, nothing)
+function Card(code::String)::Card
+    getindex(SetBundles, code)
 end
 
 function Base.in(card::Card, deck::Deck)::Bool
