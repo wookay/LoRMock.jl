@@ -3,7 +3,7 @@ module test_lormock_positional_rectangles
 using Test
 using LoRMock
 
-@test Game.rectangles() == PositionalRectangles(nothing, nothing, GameState("Menus"), Screen(1, 1), [])
+@test Game.rectangles() == PositionalRectangles(nothing, nothing, "Menus", Screen(1, 1), [])
 
 #=
 {

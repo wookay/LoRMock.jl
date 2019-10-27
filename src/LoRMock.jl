@@ -1,7 +1,7 @@
 module LoRMock
 
 export Game, DataDragon
-export DeckList, GameResult, PositionalRectangles, GameState, Screen, Rectangle
+export DeckList, GameResult, PositionalRectangles, Screen, Rectangle
 
 include("types.jl")
 include("Game.jl")

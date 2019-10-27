@@ -10,9 +10,10 @@ LoRDeckCodes = "078e6c93-a565-420a-af46-e2c4e3180690"
 [extras]
 Jive = "ba5e3d4b-8524-549f-bc71-e76ad9e9deed"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 
 [targets]
-test = ["Test", "Jive"]
+test = ["Test", "Jive", "HTTP"]
 
 [compat]
 julia = "1"

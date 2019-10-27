@@ -32,10 +32,6 @@ struct GameResult
     LocalPlayerWon::Bool
 end
 
-struct GameState
-    state::String # InProgress Menus
-end
-
 struct Screen
     ScreenWidth::Int
     ScreenHeight::Int
@@ -53,7 +49,7 @@ end
 struct PositionalRectangles
     PlayerName::Union{Nothing,String}
     OpponentName::Union{Nothing,String}
-    GameState::GameState
+    GameState::String
     Screen::Screen
     Rectangles::Vector{Rectangle}
 end
