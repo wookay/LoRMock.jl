@@ -16,7 +16,6 @@ Card(String[], "Demacia", 3, 4, 3, "Allegiance: Grant all allies +1|+1.", "\"You
 
 ### Installation
 ```
-$ julia -e 'using Pkg; pkg"registry add https://github.com/JuliaRegistries/General.git"'
 $ julia -e 'using Pkg; pkg"registry add https://github.com/wookay/Registro.git"'
 $ julia -e 'using Pkg; pkg"up"'
 $ julia -e 'using Pkg; pkg"add LoRMock"'
