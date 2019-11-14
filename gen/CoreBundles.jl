@@ -4,7 +4,7 @@ module CoreBundles # LoRMock.DataDragon
 keywords = [
     "Obliterate",
     "Skill",
-    "Double Strike",
+    "DoubleStrike",
     "Weakest",
     "Elusive",
     "Drain",
@@ -21,7 +21,7 @@ keywords = [
     "Fleeting",
     "Fast",
     "Overwhelm",
-    "Quick Strike",
+    "QuickStrike",
     "Tough",
     "Recall",
     "Ionia",
@@ -32,7 +32,7 @@ keywords = [
     "Noxus",
     "Ephemeral",
     "Freljord",
-    "Last Breath",
+    "LastBreath",
     "Challenger",
     "Imbue",
     "Fearsome",
@@ -40,7 +40,6 @@ keywords = [
 ]
 
 regions = [
-    "Neutral",
     "Noxus",
     "Demacia",
     "Freljord",

@@ -4,7 +4,7 @@ using JSON2
 ### SetBundles
 
 tarball_url = "https://dd.b.pvp.net/datadragon-set1-lite-en_us.zip"
-hash = "3f3e174d49597f1e6c5136391b7be28a42dfda9df3842182b210a9a2de85389b" # using SHA; bytes2hex(sha256(read(file)))
+hash = "5da75f2630e599095c9ebee3f647b85c17b17435ce202bc6b56025fc1b3ef5b6" # using SHA; bytes2hex(sha256(read(file)))
 prefix = Prefix(normpath(@__DIR__, "datadragon-set1-lite-en_us"))
 !isinstalled(tarball_url, hash, prefix=prefix) && install(tarball_url, hash, prefix=prefix)
 
@@ -31,7 +31,7 @@ close(f)
 ### CoreBundles
 
 tarball_url = "https://dd.b.pvp.net/datadragon-core-en_us.zip"
-hash = "8d1441feb2b58a52e6dd1b4bd13c4d7c243df6033ecffcda455a7e35f4b7c6f5" # using SHA; bytes2hex(sha256(read(file)))
+hash = "bd2af263096048a2085e9109f03f446e590f8d4e4b725d4a6ff65096352e5d2a" # using SHA; bytes2hex(sha256(read(file)))
 prefix = Prefix(normpath(@__DIR__, "datadragon-core-en_us"))
 !isinstalled(tarball_url, hash, prefix=prefix) && install(tarball_url, hash, prefix=prefix)
 
