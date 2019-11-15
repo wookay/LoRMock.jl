@@ -59,23 +59,14 @@ end
 
 function decklist(::GameController)
     list = Game.decklist()
-    if nothing === list.DeckCode
-        DeckCode = "null"
-    else
-        DeckCode = repr(list.DeckCode)
-    end
     if nothing === list.CardsInDeck
-        CardsInDeck = " null"
+        CardsInDeck = nothing
     else
-        CardsInDeck = string('\n', repeat(' ', 4), '{', '\n', join(map(list.CardsInDeck) do card
-            string(repeat(' ', 8), repr(card.code), ": ", card.count)
-        end, ",\n"), '\n', repeat(' ', 4), '}')
+        CardsInDeck = map(list.CardsInDeck) do card
+            card.code => card.count
+        end
     end
-    body = """{
-    "DeckCode": $DeckCode,
-    "CardsInDeck":$CardsInDeck
-}"""
-    Render("application/json; charset=utf-8", Vector{UInt8}(body))
+    render(JSON, (DeckCode=list.DeckCode, CardsInDeck=CardsInDeck))
 end
 
 function rectangles(::GameController)
